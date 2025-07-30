@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            background-color: #0a0a0a;
+            color: #d1d1d1;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        
+        nav {
+            background-color: #121212;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1e1e1e;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        
+        nav ul li a {
+            color: #569cd6;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav ul li a:hover {
+            color: #9cdcfe;
+            border-bottom: 2px solid #569cd6;
+        }
+        
+        main {
+            flex: 1;
+            padding: 2rem 0;
+        }
+        
+        .about-me, .my-projects, .contacts {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            padding: 2rem;
+            background-color: #121212;
+            border: 1px solid #252525; 
+            border-radius: 4px;
+        }
+        
+        .about-me {
+            text-align: center;
+        }
+        
+        .hello {
+            color: #569cd6;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+        
+        .name-n-age {
+            color: #569cd6;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .more-about-me {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #d4d4d4;
+        }
+        
+        .h1-projects, .h1-contacts {
+            color: #569cd6;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .my-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .proj1, .proj2, .proj3 {
+            background-color: #1e1e1e;
+            padding: 1.5rem;
+            border: 1px solid #252525;
+            transition: all 0.3s;
+        }
+        
+        .proj1:hover, .proj2:hover, .proj3:hover {
+            border-color: #569cd6;
+            box-shadow: 0 0 10px rgba(86, 156, 214, 0.2);
+        }
+        
+        .proj1 img, .proj2 img, .proj3 img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #252525;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+        }
+        
+        .proj1-name, .proj2-name, .proj3-name {
+            color: #569cd6;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+        
+        .contacts {
+            text-align: center;
+        }
+        
+        .Telegram, .GitHub, .Max {
+            margin-bottom: 1rem;
+        }
+        
+        .Telegram a, .GitHub a {
+            color: #569cd6;
+            text-decoration: none;
+            transition: color 0.3s;  
+        }
+        
+        .Telegram a:hover, .GitHub a:hover {
+            color: #9cdcfe;
+            text-decoration: underline;
+        }
+        
+        .Max a {
+            color: #6e7681;
+            cursor: not-allowed;
+        }
+        
+        footer {
+            background-color: #121212;
+            color: #6e7681;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #252525;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 0.8rem;
+            }
+            
+            .about-me, .my-projects, .contacts {
+                padding: 1.5rem;
+                margin: 0 1rem 1.5rem;
+            }
+            
+            .my-projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div id="about" class="about-me">
+            <h1 class="hello">Привет! Это моё портфолио.</h1>
+            <h2 class="name-n-age">Меня зовут Тихон, мне 12 лет.</h2>
+            <p class="more-about-me">Я программирую на HTML + CSS и JS.</p>
+            <p class="more-about-me">Я хочу научиться монтировать видео на заказ и зарабатывать на этом.</p>
+            <p class="more-about-me">У меня дома две кошки: Лилу и Лисичка (дочь Лилу)</p>
+        </div>
+        
+        <div id="projects" class="my-projects">
+            <h1 class="h1-projects">Мои проекты</h1>
+            <div class="proj1">
+                <img src="#" alt="Проект в разработке">
+                <h1 class="proj1-name">В разработке...</h1>
+                <p class="proj1-description"></p>
+            </div>
+            <div class="proj2">
+                <img src="#" alt="Проект в разработке">
+                <h1 class="proj2-name">В разработке...</h1>
+                <p class="proj2-description"></p>
+            </div>
+            <div class="proj3">
+                <img src="#" alt="Проект в разработке">
+                <h1 class="proj3-name">В разработке...</h1>
+                <p class="proj3-description"></p>
+            </div>
+        </div>
+        
+        <div id="contacts" class="contacts">
+            <h1 class="h1-contacts">Мои контакты</h1>
+            <p class="Telegram"><a href="https://t.me/EasyMain" target="_blank">Telegram - @EasyMain</a></p>
+            <p class="GitHub"><a href="https://github.com/tihonprogrammer" target="_blank">GitHub - tihonprogrammer</a></p>
+            <p class="Max"><a href="#">Max - упс, пользователь не найден...</a></p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025. Вся информация защищена</p>
+    </footer>
+</body>
+</html>
